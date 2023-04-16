@@ -7,5 +7,5 @@ edition = "2021"
 
 [dependencies]
 hyper = { version = "1.0.0-rc.3", features = ["server"] }
-tokio = { version = "1", features = ["rt", "macros", "net"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
 http-body-util = "0.1.0-rc.2"
