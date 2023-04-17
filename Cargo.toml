@@ -6,7 +6,7 @@ license = "MIT"
 description = "On-demand http status code response"
 repository = "https://github.com/tomascarreira/risposte"
 readme = "README.md"
-keyword = ["http", "statuscode"]
+keywords = ["http", "statuscode"]
 categories = ["web-programming::http-server", "development-tools::testing"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
