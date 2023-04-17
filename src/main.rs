@@ -3,6 +3,7 @@ use std::{net::SocketAddr, str::FromStr};
 use http_body_util::Full;
 use hyper::{server, service, Request, body, Response, StatusCode};
 use anyhow::Context;
+use clap::Parser;
 
 async fn handle_request(req: Request<body::Incoming>) -> anyhow::Result<Response<Full<body::Bytes>>> {
     println!("{:?}", req);
@@ -33,9 +34,20 @@ async fn handle_request(req: Request<body::Incoming>) -> anyhow::Result<Response
     Ok(Response::builder().status(status_code).header("riposte-response", &status_code.to_string()).body(Full::new(body::Bytes::new()))?)
 }
 
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    /// Port number to listen on
+    #[arg(short, long, default_value_t = 8080)]
+    port: u16,
+}
+
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let addr = SocketAddr::from_str("127.0.0.1:8080").context("Port given is not a valid port.")?;
+    let args = Args::parse();
+
+    let addr = format!("127.0.0.1:{}", args.port);
+    let addr = SocketAddr::from_str(&addr).context("Port given is not a valid port.")?;
     let listener = tokio::net::TcpListener::bind(addr).await.context("Could not bind to port.")?;
     println!("Listening on address: {addr}");
 
