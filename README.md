@@ -2,7 +2,7 @@
 
 A server that allows clients to specify the response code that the server will return.
 
-This could be useful for testing the logic of a client for rare or difficult to set up status code.
+This could be useful for testing the logic of a client for rare or difficult to set up client-server interactions.
 
 ## Instalation
 
