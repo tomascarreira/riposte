@@ -38,6 +38,8 @@ The server will respond with that status code and the response will have the hea
 
 ## Examples
 
+### Example 1
+
 Request:
 
     GET / HTTP/1.1
@@ -47,8 +49,10 @@ Request:
 Response:
 
     HTTP/1.1 418 I'm a teapot
-    riposte-renspose: 418
+    riposte-response: 418
     content-length: 0
+
+### Example 2
 
 Request:
 
