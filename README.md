@@ -6,7 +6,9 @@ This could be useful for testing the logic of a client for rare or difficult to 
 
 ## Instalation
 
-Currently only linux is supported.
+### Dowload binary
+
+Currently only a linux binary is avalable.
 
 1. Download the latest version from the [releases page](https://github.com/tomascarreira/risposte/releases).
 2. Give executable permision to the binary `chmod u+x path/to/riposte`
