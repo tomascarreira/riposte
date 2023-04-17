@@ -31,7 +31,7 @@ async fn handle_request(req: Request<body::Incoming>) -> anyhow::Result<Response
         },
     };
 
-    Ok(Response::builder().status(status_code).header("riposte-response", &status_code.to_string()).body(Full::new(body::Bytes::new()))?)
+    Ok(Response::builder().status(status_code).header("riposte-response", status_code.as_str()).body(Full::new(body::Bytes::new()))?)
 }
 
 #[derive(Parser, Debug)]
