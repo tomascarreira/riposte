@@ -56,7 +56,7 @@ Request:
     Host: foo.bar
     Content-Type: application/x-www-form-urlencoded
     Content-Length: 27
-    riposte-response: 502
+    riposte-request: 502
 
     field1=val1&field2=val2
 
