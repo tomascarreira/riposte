@@ -6,7 +6,16 @@ This could be useful for testing the logic of a client for rare or difficult to 
 
 ## Instalation
 
-**Update when its publish on crates.io**
+Currently only linux is supported.
+
+Download the latest version from the [releases page](https://github.com/tomascarreira/risposte/releases).
+
+### Or build from source
+
+1. Instal [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) (the rust package manager)
+2. `cargo install riposte`
+
+The binary will be on .cargo/bin/riposte.
 
 ## Usage
 
